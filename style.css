@@ -3,10 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
-  color: black;
 }
 body {
-  color: white;
+  color: #ededed;
+  background-color: #0c0530;
 }
 
 .header {
@@ -15,7 +15,7 @@ body {
   left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: transparent;
+  background: #08041d;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +49,7 @@ body {
   width: 100%;
   justify-content: space-between;
   height: 100vh;
-  background: no-repeat;
+  background: url(backround.png) no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -119,6 +119,112 @@ body {
 }
 .btn-box:hover {
   box-shadow: 0 0 50px blue, 0 0 25px blue, 0 0 100px blue, 0 0 200px blue;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+
+  padding: 20px;
+}
+.abt-img img {
+  width: 120%; /* Make the image responsive */
+  max-width: 150px; /* Set a max-width for the image */
+  height: 150%; /* Maintain aspect ratio */
+  border-radius: 50%; /* Set border-radius to 50% */
+  padding-bottom: 20px;
+  margin: 70px;
+}
+.about-text h2 {
+  font-size: 60px;
+}
+.about-text h2 span {
+  color: blue;
+}
+.about-text h4 {
+  font-size: 29px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.7;
+  margin: 15px 0 30px;
+}
+
+.about-text p {
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+}
+#services {
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+}
+.sub-title {
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 70px;
+}
+.sub-title span {
+  color: blue;
+}
+.container {
+  padding: 90px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minimax(259px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.services-list div {
+  background-color: transparent;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 13px;
+  border-right: 10px;
+  border-radius: 20px;
+  transition: background 0.5s, transform 0.5s;
+  box-shadow: 1px 1px 40px blue, 1px 1px 40px #0053b8f7;
+}
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a {
+  text-decoration: none;
+  color: #0c0530;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.read {
+  display: inline-block;
+  padding: 12px 28px;
+  background: blue;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #0c0530;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwads;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px blue, 0 0 25px blue;
+}
+.Read:hover {
+  box-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 100px blue,
+    0 0 200px blue;
 }
 @keyframes slideRight {
   0% {
