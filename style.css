@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 body {
   color: #ededed;
@@ -126,13 +126,12 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 1.5rem;
-
   padding: 20px;
 }
 .abt-img img {
-  width: 120%; /* Make the image responsive */
+  width: 100%; /* Make the image responsive */
   max-width: 150px; /* Set a max-width for the image */
-  height: 150%; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Set border-radius to 50% */
   padding-bottom: 20px;
   margin: 70px;
@@ -150,7 +149,6 @@ body {
   line-height: 1.7;
   margin: 15px 0 30px;
 }
-
 .about-text p {
   color: aliceblue;
   font-size: 20px;
@@ -174,10 +172,9 @@ body {
 .container {
   padding: 90px;
 }
-
 .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minimax(259px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
 }
@@ -217,7 +214,7 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
-  animation: slideTop 1s ease forwads;
+  animation: slideTop 1s ease forwards;
   animation-delay: 2s;
   box-shadow: 0 0 5px blue, 0 0 25px blue;
 }
@@ -232,10 +229,10 @@ section {
   flex-wrap: wrap;
 }
 .container1 {
-  width: 600px;
-  height: 500px;
-  padding: 75px 90px;
-  margin-left: 120px;
+  width: 100%; /* Adjusted width to be 100% */
+  max-width: 1200px; /* Maximum width for better responsiveness */
+  margin: 0 auto; /* Center the container */
+  padding: 75px 20px; /* Adjusted padding for better layout */
 }
 .heading1 {
   text-align: center;
@@ -247,7 +244,6 @@ section {
 .bar {
   font-size: 23px;
 }
-
 .Technical-bars .bar {
   margin-top: 40px;
 }
@@ -269,7 +265,7 @@ section {
 .Technical-bars .bar .progress-line {
   position: relative;
   border-radius: 10px;
-  width: 100;
+  width: 100%;
   height: 5px;
   background-color: black;
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
@@ -290,7 +286,6 @@ section {
   transform: scaleX(0);
   transform-origin: left;
 }
-
 .progress-line.html span {
   width: 90%;
 }
@@ -303,6 +298,169 @@ section {
 .progress-line.python span {
   width: 72%;
 }
+.progress-line span::after {
+  position: absolute;
+  padding: 1px 8px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+.progress-line.html span::after {
+  content: "90%";
+}
+.progress-line.css span::after {
+  content: "70%";
+}
+.progress-line.Javascript span::after {
+  content: "80%";
+}
+.progress-line.python span::after {
+  content: "72%";
+}
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: black;
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.radial-bars {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+  width: 45%; /* Adjusted width to fit two items per row */
+  max-width: 300px; /* Maximum width for each radial bar */
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.radial-bars .radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+  stroke-width: 10;
+  stroke: black; /* Ensure stroke color is defined */
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+
+.path {
+  stroke-width: 10;
+  stroke: blue;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+.path-1 {
+  animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+  animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+  animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4 {
+  animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+  100% {
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes animate-path2 {
+  100% {
+    stroke-dashoffset: 175;
+  }
+}
+
+@keyframes animate-path3 {
+  100% {
+    stroke-dashoffset: 125;
+  }
+}
+
+@keyframes animate-path4 {
+  100% {
+    stroke-dashoffset: 75;
+  }
+}
+
+.radial-bar .percentage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.radial-bar .text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes slideRight {
   0% {
     transform: translateX(-100px);

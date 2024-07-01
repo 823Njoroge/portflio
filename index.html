@@ -3,157 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
   </head>
   <body>
     <header class="header">
-      <a href="#" class="logo">Portfolio</a>
+      <a href="#" class="logo">My Logo</a>
       <nav class="navbar">
-        <a href="#" style="--i:1;"class="active">Home</a>
-        <a href="#"style="--i:2;">Projects</a>
-        <a href="#"style="--i:3;">Skills</a>
-        <a href="#"style="--i:4;">About</a>
-        <a href="#"style="--i:5;">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
-    <section class="home">
+
+    <section class="home" id="home">
       <div class="home-content">
-        <h3>Hello, it's me</h3>
-        <h1>Ian Njoroge.</h1>
-        <h3>I am a <span class="text"></span></h3>
+        <h3>Hello, I am <span>John Doe</span></h3>
+        <h1>Web Developer</h1>
         <p>
-          who thrives on turning complex problems into simple, elegant solutions using the power of machine learning and data science. Explore my projects to see innovation in action.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <div class="home-sct">
-          <a href="https://www.linkedin.com/in/ian-njoroge-1b6317243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"style="--i:7;"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://x.com/ianoh_ke8"style="--i:8;"><i class="bx bxl-twitter"></i></a>
-          <a href="https://github.com/823Njoroge"style="--i:9;"><i class="bx bxl-github"></i></a>
-          <a href="mailto:njorogeian823@gmail.com" style="--i:10;"><i class="bx bx-envelope"></i></a>
-
-        </div>
-        <a href="#" class="btn-box">More info</a>
+        <a href="#" class="btn-box">Read More</a>
       </div>
-    </div>
-  </div>
-  <span class="home-imgHover"></span>
     </section>
+
     <section class="about" id="about">
-     <div class="abt-img">
-      <img src="dp2.jpg">
-     </div>
+      <div class="abt-img">
+        <img src="your-photo.jpg" alt="Your Photo" />
+      </div>
       <div class="about-text">
-        <h2>About <span>Me</span>  </h2>
-        <h4>Front End developer</h4>
-        <p>I am a passionate front-end developer with a knack for creating visually stunning and highly functional websites. With expertise in HTML, CSS, JavaScript, and frameworks like React, I bring designs to life with seamless user experiences. My work blends creativity and technical skill to build responsive, user-friendly interfaces that engage and delight users. Explore my portfolio to see how I turn ideas into interactive digital experiences.
+        <h2>About <span>Me</span></h2>
+        <h4>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </p>
-        <a href="#" class="btn-box">More about me</a>
-      </section>
-        <section>
-          <div class="services" id="services">
-            <div class="container">
-            <h1 class="sub-title">My <span>Services</span></h1>
-            <div class="services-list">
-              <div>
-              <i class='bx bxs-data' style='color:blue'  ></i>
-              <h2>Data Science and Machine Learning</h2>
-              <p>As a skilled data scientist and machine learning expert, I provide comprehensive services that transform data into actionable insights and intelligent solutions. I specialize in developing robust predictive models, designing advanced algorithms, and leveraging big data to drive strategic decision-making. From data preprocessing and exploratory analysis to deploying scalable machine learning systems, I ensure precise and impactful results. Whether you need to optimize business processes, forecast trends, or harness the power of AI for innovative applications, my expertise will help you unlock the full potential of your data.</p>
-              <a href="#" class="read">Learn more</a>
+      </div>
+    </section>
 
+    <section class="container1">
+      <div class="skills-section">
+        <div class="Technical-skills">
+          <h2>Technical Skills</h2>
+          <div class="Technical-bars">
+            <div class="bar">
+              <div class="info">
+                <span>HTML</span>
+              </div>
+              <div class="progress-line html">
+                <span></span>
+              </div>
             </div>
-            <div>
-            <i class='bx bx-code' style="color: blue;"></i>
-            <h2>Front End development</h2>
-            <p>As a dedicated front-end developer, I offer a comprehensive suite of services designed to elevate your digital presence. From crafting responsive and visually captivating websites to optimizing user interfaces for seamless interaction, I specialize in translating design concepts into dynamic, user-friendly web applications. My expertise extends to cutting-edge technologies like HTML5, CSS3, JavaScript, and React, ensuring your website is not only aesthetically pleasing but also highly functional and performant. Whether you need a complete website overhaul, custom web components, or interactive features, I am committed to delivering solutions that enhance user engagement and drive success for your business</p>
-            <a href="#" class="read">Learn more</a>
-
-          </div>
-          
-          </div>
-        </section>
-        <h1 class="sub-title">My <span>Skills</span></h1>
-
-        <section>
-          <div class="container1" id="skills">
-            <h1 class="heading1">Technical Skills</h1>
-            <div class="Technical-bars">
-              <div class="bar"><i style="color: #c95d2e;"  class='bx bxl-html5'></i>
-                <div class="info">
-                  <span>HTML</span>
-
-                </div>
-                <div class="progress-line html">
-                  <span></span>
-                </div>
+            <div class="bar">
+              <div class="info">
+                <span>CSS</span>
               </div>
-              <div class="bar"><i style="color: #147bbc;" class='bx bxl-css3' ></i>
-                <div class="info">
-                  <span>CSS</span>
-
-                </div>
-                <div class="progress-line css">
-                  <span></span>
-                </div>
+              <div class="progress-line css">
+                <span></span>
               </div>
-              <div class="bar"><i style="color: #b0bc1e;" class='bx bxl-javascript'></i>
-                <div class="info">
-                  <span>Javascript</span>
-
-                </div>
-                <div class="progress-line Javascript">
-                  <span></span>
-                </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>JavaScript</span>
               </div>
-              <div class="bar"><i style="color: #c32ec9;" class='bx bxl-python'></i>
-                <div class="info">
-                  <span>Python</span>
-
-                </div>
-                <div class="progress-line python">
-                  <span></span>
-                </div>
+              <div class="progress-line Javascript">
+                <span></span>
               </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>Python</span>
+              </div>
+              <div class="progress-line python">
+                <span></span>
+              </div>
+            </div>
           </div>
-
-          <div class="container1">
-            <h1 class="heading1">Professional Skills</h1>
-            <div class="radial-bars">
-              <svg x="0px" y="0px" viewBox="0 0 200 200">
-                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-              </svg>
-              <div class="percentage">75%</div>
-              <div class="text">Creativity</div>
-          </div>
+        </div>
+        <div class="Professional-skills">
+          <h2>Professional Skills</h2>
           <div class="radial-bars">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">80%</div>
-            <div class="text">Communication and writing</div>
-        </div><div class="radial-bars">
-          <svg x="0px" y="0px" viewBox="0 0 200 200">
-            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-          </svg>
-          <div class="percentage">85%</div>
-          <div class="text">Problem Solving</div>
-      </div><div class="radial-bars">
-        <svg x="0px" y="0px" viewBox="0 0 200 200">
-          <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-          <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-        </svg>
-        <div class="percentage">75%</div>
-        <div class="text">Teamwork</div>
-    </div>
-        </section>
+            <div class="radial-bar">
+              <svg>
+                <circle cx="50%" cy="50%" r="45%" class="progress-bar"></circle>
+                <circle cx="50%" cy="50%" r="45%" class="path path-1"></circle>
+              </svg>
+              <div class="percentage">90%</div>
+              <div class="text">Communication</div>
+            </div>
+            <div class="radial-bar">
+              <svg>
+                <circle cx="50%" cy="50%" r="45%" class="progress-bar"></circle>
+                <circle cx="50%" cy="50%" r="45%" class="path path-2"></circle>
+              </svg>
+              <div class="percentage">70%</div>
+              <div class="text">Teamwork</div>
+            </div>
+            <div class="radial-bar">
+              <svg>
+                <circle cx="50%" cy="50%" r="45%" class="progress-bar"></circle>
+                <circle cx="50%" cy="50%" r="45%" class="path path-3"></circle>
+              </svg>
+              <div class="percentage">80%</div>
+              <div class="text">Problem Solving</div>
+            </div>
+            <div class="radial-bar">
+              <svg>
+                <circle cx="50%" cy="50%" r="45%" class="progress-bar"></circle>
+                <circle cx="50%" cy="50%" r="45%" class="path path-4"></circle>
+              </svg>
+              <div class="percentage">72%</div>
+              <div class="text">Time Management</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="main.js"></script>
+    <footer>
+      <!-- Your footer content here -->
+    </footer>
   </body>
 </html>
