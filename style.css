@@ -164,7 +164,7 @@ body {
 .sub-title {
   text-align: center;
   font-size: 60px;
-  padding-bottom: 70px;
+  padding-bottom: 0;
 }
 .sub-title span {
   color: blue;
@@ -229,6 +229,7 @@ section {
   flex-wrap: wrap;
 }
 .container1 {
+  top: 0;
   width: 100%; /* Adjusted width to be 100% */
   max-width: 1200px; /* Maximum width for better responsiveness */
   margin: 0 auto; /* Center the container */
@@ -454,12 +455,13 @@ section {
   animation: showText 0.5s 1s linear forwards;
   opacity: 0;
 }
+
 .main-text {
   padding-top: 130px;
-  margin-top: 200px;
+  margin-top: 200px; /* Check if both padding and margin are needed */
 }
 .main-text h2 {
-  font-size: 60px;
+  font-size: 60px; /* Consider using rem or em for better responsiveness */
   line-height: 1;
   text-align: center;
 }
@@ -469,7 +471,11 @@ section {
 }
 .portfolio-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(359px, 1fr)
+  ); /* Adjusted for better responsiveness */
+  gap: 20px; /* Added gap for spacing between grid items */
 }
 .row {
   position: relative;
@@ -479,14 +485,15 @@ section {
 }
 .row img {
   width: 100%;
+  height: 100%;
   border-radius: 8px;
   display: block;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease; /* Added ease for smoother transition */
 }
 .layer {
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), blue);
+  background: linear-gradient(rgba(2, 1, 20, 0.842), blue);
   position: absolute;
   border-radius: 8px;
   left: 0;
@@ -497,38 +504,43 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 40px;
-  transition: height 0.5s;
+  padding: 0 20px; /* Adjusted padding for better spacing */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  transition: height 0.5s ease; /* Added ease for smoother transition */
 }
 
 .layer h5 {
-  color: #fff; /* Changed to white for better readability */
+  color: #fff; /* White for better readability */
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
 }
 .layer p {
-  color: #fff; /* Changed to white for better readability */
+  color: #fff; /* White for better readability */
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.5; /* Adjusted line height for better readability */
+  text-align: justify;
+  margin: 0; /* Ensure no default margin interferes */
 }
 .layer i {
-  color: #ff004f; /* Ensure the icon color matches the intended style */
+  color: blue; /* Ensure the icon color matches the intended style */
   margin-top: 20px;
   font-size: 20px;
-  background: white;
+  background: #0c0530;
   width: 60px;
   height: 60px;
   display: flex;
+  text-decoration: none;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; /* Fix the border radius */
+  border-radius: 50%; /* Fixed border radius */
 }
 .row:hover img {
   transform: scale(1.1);
 }
 .row:hover .layer {
   height: 100%;
+  transition: height 0.5s ease; /* Added transition for smooth height change */
 }
 
 .contact {
@@ -629,6 +641,9 @@ form textarea {
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
   box-shadow: 0 0 5px blue, 0 0 25px blue;
+}
+.Contact-form form .send:hover {
+  box-shadow: 0 0 50px blue, 0 0 25px blue, 0 0 100px blue, 0 0 200px blue;
 }
 
 @keyframes showText {
